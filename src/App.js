@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useDebugValue } from "react";
 import axios from "axios";
 import CardList from "./components/CardList/CardList";
 
 function App() {
   const [monsters, setMonsters] = useState([]);
+  const [searchTerm, setSearchTerm] = useState("");
 
   useEffect(() => {
     const fetchData = async () => {
@@ -15,9 +16,18 @@ function App() {
     fetchData();
   }, []);
 
+  const filterMonsters = monsters.filter(monster =>
+    monster.name.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
   return (
     <>
-      <CardList monsters={monsters} />
+      <input
+        type="search"
+        placeholder="search monsters"
+        onChange={e => setSearchTerm(e.target.value)}
+      />
+      <CardList monsters={filterMonsters} />
     </>
   );
 }
