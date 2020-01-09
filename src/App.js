@@ -24,6 +24,7 @@ function App() {
 
   return (
     <div className={styles.App}>
+      <h1 className={styles.title}>Monsters Rolodex</h1>
       <SearchBox
         placeholder="search monsters"
         handleChange={e => setSearchTerm(e.target.value)}

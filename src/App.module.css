@@ -1,3 +1,10 @@
-.App{
+.App {
     display: grid;
+    text-align: center;
+}
+
+.title {
+    font-family: 'Bigelow Rules';
+    font-size: 70px;
+    color: #0ccac4;
 }
