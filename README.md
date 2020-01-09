@@ -1,4 +1,4 @@
-## Simple React project, experimenting with CSSModules and React Hooks (useState(), useEffect()), axios etc.
+## Simple React project, experimenting with CSSModules, React Hooks(useState(), useEffect()), axios etc.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
