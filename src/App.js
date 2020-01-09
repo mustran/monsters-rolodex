@@ -1,6 +1,8 @@
-import React, { useState, useEffect, useDebugValue } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 import CardList from "./components/CardList/CardList";
+import SearchBox from "./components/Search-box/SearchBox";
+import styles from './App.module.css'
 
 function App() {
   const [monsters, setMonsters] = useState([]);
@@ -21,14 +23,13 @@ function App() {
   );
 
   return (
-    <>
-      <input
-        type="search"
+    <div className={styles.App}>
+      <SearchBox
         placeholder="search monsters"
-        onChange={e => setSearchTerm(e.target.value)}
+        handleChange={e => setSearchTerm(e.target.value)}
       />
       <CardList monsters={filterMonsters} />
-    </>
+    </div>
   );
 }
 
