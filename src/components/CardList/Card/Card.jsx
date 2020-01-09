@@ -9,7 +9,7 @@ const Card = ({ monster, imageKey }) => {
         src={`https://robohash.org/${imageKey}/?set=set2&size=180x180`}
       />
       <h1>{monster.name}</h1>
-      <p style={{ textAlign: "center" }}>{monster.email}</p>
+      <p>{monster.email}</p>
     </div>
   );
 };
